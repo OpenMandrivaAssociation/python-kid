@@ -1,6 +1,6 @@
 %define module	kid
 %define name	python-%{module}
-%define version	0.9.4
+%define version	0.9.5
 %define release	%mkrel 1
 
 Name:		%{name}
@@ -9,9 +9,8 @@ Release: 	%{release}
 Summary:        A simple and pythonic XML template language
 Group: 		Development/Python
 License:        MIT
-URL:            http://www.lesscode.org/projects/kid
-Source0:        http://lesscode.org/dist/kid/%{version}/kid-%{version}.tar.bz2
-Patch0:		kid-0.9.4-cet_test.patch
+URL:            http://kid-templating.org/
+Source0:        http://kid-templating.org/dist/kid/%{version}/kid-%{version}.tar.bz2
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 BuildArch:      noarch
 BuildRequires:	python-devel >= 2.2
@@ -33,7 +32,6 @@ used like normal Python modules.
 
 %prep
 %setup -q -n kid-%{version}
-%patch0 -p1 -b .cet_test
 perl -pi -e 's/^(use_setuptools)/#$1/' setup.py
 rm -f doc/#guide.txt#
 
@@ -46,6 +44,7 @@ rm -rf %{buildroot}
 python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 
 %check
+# test are not run, should be fixed
 make test
 
 %clean
