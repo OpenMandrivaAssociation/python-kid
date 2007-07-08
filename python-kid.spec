@@ -44,7 +44,7 @@ rm -rf %{buildroot}
 python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
 
 %check
-# test are not run, should be fixed
+make clean
 make test
 
 %clean
