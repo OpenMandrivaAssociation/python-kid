@@ -11,6 +11,7 @@ Group: 		Development/Python
 License:        MIT
 URL:            http://kid-templating.org/
 Source0:        http://kid-templating.org/dist/kid/%{version}/kid-%{version}.tar.bz2
+BuildRoot:      %{_tmppath}/%{name}-%{version}
 BuildArch:      noarch
 BuildRequires:	python-devel >= 2.2
 BuildRequires:	python-celementtree
