@@ -1,7 +1,7 @@
 %define module	kid
 %define name	python-%{module}
-%define version	0.9.5
-%define release	%mkrel 2
+%define version	0.9.6
+%define release	%mkrel 1
 
 Name:		%{name}
 Version: 	%{version}
@@ -10,7 +10,7 @@ Summary:        A simple and pythonic XML template language
 Group: 		Development/Python
 License:        MIT
 URL:            http://kid-templating.org/
-Source0:        http://kid-templating.org/dist/kid/%{version}/kid-%{version}.tar.bz2
+Source0:        http://www.kid-templating.org/dist/%{version}/kid-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 BuildArch:      noarch
 BuildRequires:	python-devel >= 2.2
