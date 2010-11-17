@@ -38,7 +38,6 @@ rm -f doc/#guide.txt#
 %build
 python setup.py build
 
-
 %install
 rm -rf %{buildroot}
 python setup.py install --root=%{buildroot} --record=INSTALLED_FILES
@@ -50,8 +49,8 @@ make test
 %clean
 rm -rf %{buildroot}
 
-%files -f INSTALLED_FILES
+%files
 %defattr(-,root,root)
 %doc doc/* examples
-
-
+%{_bindir}/*
+%py_puresitedir/*
