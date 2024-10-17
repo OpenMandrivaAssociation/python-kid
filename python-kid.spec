@@ -9,7 +9,7 @@ Release: 	%{release}
 Summary:        A simple and pythonic XML template language
 Group: 		Development/Python
 License:        MIT
-URL:            http://kid-templating.org/
+URL:            https://kid-templating.org/
 Source0:        http://www.kid-templating.org/dist/%{version}/kid-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 BuildArch:      noarch
